@@ -11,13 +11,13 @@
             <groupId>rhino</groupId>
             <artifactId>js</artifactId>
             <version>1.7R2</version>
-            <scope>compile,test</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
-            <scope>compile,test</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
