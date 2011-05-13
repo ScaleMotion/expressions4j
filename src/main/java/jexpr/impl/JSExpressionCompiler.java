@@ -55,14 +55,18 @@ public class JSExpressionCompiler extends AbstractExpressionCompiler {
         private boolean isMap;
 
         private ScopeVariablesFactory(Class contextClass) {
+            if (contextClass == null) {
+                contextClass = Object.class;
+            }
             this.contextClass = contextClass;
             if (Map.class.isAssignableFrom(contextClass)) {
                 isMap = true;
             } else {
                 for (Field f : Reflection.fields(contextClass)) {
-                    if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers()))
+                    if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers())) {
                         f.setAccessible(true);
-                    contextFields.add(f);
+                        contextFields.add(f);
+                    }
                 }
                 for (Method f : Reflection.methods(contextClass)) {
                     if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers()) && Reflection.getterToName(f.getName()) != null && !"getClass".equals(f.getName())) {

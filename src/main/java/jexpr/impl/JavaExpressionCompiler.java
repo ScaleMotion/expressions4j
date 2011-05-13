@@ -48,6 +48,9 @@ public class JavaExpressionCompiler extends AbstractExpressionCompiler {
     }
 
     private <K, V> CompiledExpression<K, V> compileInternal(String expressionText, Class<K> contextType, Class<V> returnType) throws Exception {
+        if (contextType == null) {
+            contextType = (Class<K>) Object.class;
+        }
         if (Map.class.isAssignableFrom(contextType)) {
             throw new IllegalStateException("Java expressions don't suport Map as a context class");
         }

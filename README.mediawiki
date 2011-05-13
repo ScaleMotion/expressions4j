@@ -1,6 +1,37 @@
 == About ==
 
+Jexpr (Java Expression Evaluator) is a project intended to embed expressions to Java programs. The typical use-cases is
+when you need to generate expression from user input or expose some rules to configuration files of your applications.
+
+=== Advantages === 
+
+* API is language-agnostic. Using some API you could treat expressions as Java or JavaScript (Groovy/Scala support is on its way;
+ff cause, expressions syntax would be different for different language).
+* Excellent API/Interoperability: it allows to expose functions/constants/variables to your expressions very easily
+* It's lightweigh. It has zero dependecies. You should plug [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist]/[http://www.mozilla.org/rhino/ Rhino] library to classpath depending on what language 
+you're using. 
+
+=== Basic examples === 
+
+<code>
+   System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null)); 
+   //will output 4
+</code>
+
+<code>
+   System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null)); 
+   //will output 25
+</code>
+
+=== What's underneath === 
+
+You may ask why this library is better than [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist] or [http://www.mozilla.org/rhino/ Rhino].
+The truth is it's not. Jexpr is just a thin wrapper around those libraries that allows to plug dynamic expression evaluation with lesser code.
+
+
 == API ==
+
+The best API doc is a well documented example:
 
 == Maven integration ==
 
