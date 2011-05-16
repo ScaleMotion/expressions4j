@@ -9,25 +9,18 @@ when you need to generate expression from user input or expose some rules to con
 * Direct jars downloads: [http://vklimontovich.github.com/maven2/jexpr/jexpr/1.0 JExpr-1.0]
 * Plugin a maven repository to pom.xml
 
-`
         <repository>
             <id>vklimontovich-github</id>
             <url>http://vklimontovich.github.com/maven2/</url>
         </repository>
-`
 
 and use it as dependency
 
-<code>
         <dependency>
             <groupId>jexpr</groupId>
             <artifactId>jexpr</artifactId>
             <version>1.0</version>
         </dependency>
-</code>
-
-
-
 
 ==Usage==
 
