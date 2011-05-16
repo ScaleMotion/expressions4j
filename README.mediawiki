@@ -36,9 +36,20 @@ you're using.
    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
    //will output 25
 
-=== What's underneath === 
+=== Dependencies === 
 
-You may ask why this library is better than [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist] or [http://www.mozilla.org/rhino/ Rhino]. The truth is it's not. Jexpr is just a thin wrapper around those libraries that allows to plug dynamic expression evaluation with lesser code.
+Jexpr has 0 runtime dependencies itself. However you might plugin javassist/rhino/both library depending of what kind of expressions are you going to use. Jexpr was tested with javassisit 3.12.1.GA and rhino 1.7R2. It also should work with higher major versions. If you're using maven you might plugin one of (or both):
+
+        <dependency>
+            <groupId>rhino</groupId>
+            <artifactId>js</artifactId>
+            <version>1.7R2</version>
+        </dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.12.1.GA</version>
+        </dependency>
 
 == API ==
 
