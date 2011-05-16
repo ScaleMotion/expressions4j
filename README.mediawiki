@@ -8,20 +8,16 @@ when you need to generate expression from user input or expose some rules to con
 
 * Direct jars downloads: [http://vklimontovich.github.com/maven2/jexpr/jexpr/1.0 JExpr-1.0]
 * Plugin a maven repository to pom.xml
-
         <repository>
             <id>vklimontovich-github</id>
             <url>http://vklimontovich.github.com/maven2/</url>
         </repository>
-
 and use it as dependency
-
         <dependency>
             <groupId>jexpr</groupId>
             <artifactId>jexpr</artifactId>
             <version>1.0</version>
         </dependency>
-
 ==Usage==
 
 === Advantages === 
@@ -33,18 +29,11 @@ ff cause, expressions syntax would be different for different language).
 you're using. 
 
 === Basic examples === 
-
-<code>
    System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
-
    //will output 4
-</code>
 
-<code>
    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
-
    //will output 25
-</code>
 
 === What's underneath === 
 
