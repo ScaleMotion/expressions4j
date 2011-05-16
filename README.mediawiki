@@ -3,6 +3,34 @@
 Jexpr (Java Expression Evaluator) is a project intended to embed expressions to Java programs. The typical use-cases is
 when you need to generate expression from user input or expose some rules to configuration files of your applications.
 
+==Getting jexpr==
+
+
+* Direct jars downloads: [http://vklimontovich.github.com/maven2/jexpr/jexpr/1.0 JExpr-1.0]
+* Plugin a maven repository to pom.xml
+
+<code>
+        <repository>
+            <id>vklimontovich-github</id>
+            <url>http://vklimontovich.github.com/maven2/</url>
+        </repository>
+</code>
+
+and use it as dependency
+
+<code>
+        <dependency>
+            <groupId>jexpr</groupId>
+            <artifactId>jexpr</artifactId>
+            <version>1.0</version>
+        </dependency>
+</code>
+
+
+
+
+==Usage==
+
 === Advantages === 
 
 * API is language-agnostic. Using some API you could treat expressions as Java or JavaScript (Groovy/Scala support is on its way;
