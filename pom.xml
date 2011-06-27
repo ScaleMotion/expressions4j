@@ -6,7 +6,7 @@
     <name>jexpr</name>
     <version>1.1-SNAPSHOT</version>
     <scm>
-        <developerConnection>scm:git:git@github.com:vklimontovich/jexpr.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:vklimontovich/expressions4j.git</developerConnection>
     </scm>
     <dependencies>
         <dependency>
