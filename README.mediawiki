@@ -3,6 +3,23 @@
 Jexpr (Java Expression Evaluator) is a project intended to embed expressions to Java programs. The typical use-cases is
 when you need to generate expression from user input or expose some rules to configuration files of your applications.
 
+==Getting jexpr==
+
+
+* Direct jars downloads: [http://vklimontovich.github.com/maven2/jexpr/jexpr/1.0 JExpr-1.0]
+* Plugin a maven repository to pom.xml
+        <repository>
+            <id>vklimontovich-github</id>
+            <url>http://vklimontovich.github.com/maven2/</url>
+        </repository>
+and use it as dependency
+        <dependency>
+            <groupId>jexpr</groupId>
+            <artifactId>jexpr</artifactId>
+            <version>1.0</version>
+        </dependency>
+==Usage==
+
 === Advantages === 
 
 * API is language-agnostic. Using some API you could treat expressions as Java or JavaScript (Groovy/Scala support is on its way;
@@ -12,28 +29,29 @@ ff cause, expressions syntax would be different for different language).
 you're using. 
 
 === Basic examples === 
-
-<code>
+   
    System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
-
    //will output 4
-</code>
 
-<code>
    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
-
    //will output 25
-</code>
 
-=== What's underneath === 
+=== Dependencies === 
 
-You may ask why this library is better than [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist] or [http://www.mozilla.org/rhino/ Rhino]. The truth is it's not. Jexpr is just a thin wrapper around those libraries that allows to plug dynamic expression evaluation with lesser code.
+Jexpr has 0 runtime dependencies itself. However you might plugin javassist/rhino/both library depending of what kind of expressions are you going to use. Jexpr was tested with javassisit 3.12.1.GA and rhino 1.7R2. It also should work with higher major versions. If you're using maven you might plugin one of (or both):
+
+        <dependency>
+            <groupId>rhino</groupId>
+            <artifactId>js</artifactId>
+            <version>1.7R2</version>
+        </dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.12.1.GA</version>
+        </dependency>
 
 == API ==
 
 The well documented examples is the best doc: https://github.com/vklimontovich/jexpr/blob/master/src/main/java/jexpr/examples/Examples.java
-
-== Maven integration ==
-
-Maven repository is coming soon!
 
