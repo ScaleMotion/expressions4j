@@ -3,7 +3,7 @@
 Expressions4j a project intended to embed expressions to Java programs. The typical use-cases is
 when you need to generate expression from user input or expose some rules to configuration files of your applications.
 
-==Getting expressions2j ==
+==Getting expressions4j ==
 
 
 * Direct jars downloads: [http://vklimontovich.github.com/maven2/expressions4j/expressions4j/1.0 JExpr-1.0]
