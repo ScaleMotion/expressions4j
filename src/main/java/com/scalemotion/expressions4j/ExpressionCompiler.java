@@ -1,4 +1,4 @@
-package jexpr;
+package com.scalemotion.expressions4j;
 
 /**
  * Interface responsible for compiling

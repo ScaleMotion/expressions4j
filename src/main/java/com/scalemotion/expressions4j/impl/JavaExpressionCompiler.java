@@ -1,11 +1,11 @@
-package jexpr.impl;
+package com.scalemotion.expressions4j.impl;
 
 import javassist.*;
 import javassist.Modifier;
-import jexpr.AbstractExpressionCompiler;
-import jexpr.CompiledExpression;
-import jexpr.ExpressionCompilationException;
-import jexpr.ExpressionFunction;
+import com.scalemotion.expressions4j.AbstractExpressionCompiler;
+import com.scalemotion.expressions4j.CompiledExpression;
+import com.scalemotion.expressions4j.ExpressionCompilationException;
+import com.scalemotion.expressions4j.ExpressionFunction;
 
 import java.lang.reflect.*;
 import java.util.*;

@@ -1,15 +1,15 @@
-package jexpr.examples;
+package com.scalemotion.expressions4j.examples;
 
-import jexpr.ExpressionFunction;
-import jexpr.impl.JSExpressionCompiler;
-import jexpr.impl.JavaExpressionCompiler;
+import com.scalemotion.expressions4j.ExpressionFunction;
+import com.scalemotion.expressions4j.impl.JSExpressionCompiler;
+import com.scalemotion.expressions4j.impl.JavaExpressionCompiler;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Class that describes API of jexpr as a set of examples.
- * See https://github.com/vklimontovich/jexpr/blob/master/README.mediawiki
+ * Class that describes API of expressions4j as a set of examples.
+ * See https://github.com/vklimontovich/expressions4j/blob/master/README.mediawiki
  */
 public class Examples {
 

@@ -1,6 +1,6 @@
-package jexpr.impl;
+package com.scalemotion.expressions4j.impl;
 
-import jexpr.ExpressionCompiler;
+import com.scalemotion.expressions4j.ExpressionCompiler;
 
 public class JSExpressionCompilerTest extends AbstractExpressionCompilerTest {
     @Override

@@ -1,4 +1,4 @@
-package jexpr;
+package com.scalemotion.expressions4j;
 
 /**
  * Function that could be injected into expressions compiler

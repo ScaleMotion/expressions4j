@@ -1,8 +1,8 @@
-package jexpr.impl;
+package com.scalemotion.expressions4j.impl;
 
-import jexpr.AbstractExpressionCompiler;
-import jexpr.CompiledExpression;
-import jexpr.ExpressionCompilationException;
+import com.scalemotion.expressions4j.AbstractExpressionCompiler;
+import com.scalemotion.expressions4j.CompiledExpression;
+import com.scalemotion.expressions4j.ExpressionCompilationException;
 import org.mozilla.javascript.*;
 
 import java.lang.reflect.Field;
@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-public class JSExpressionCompiler extends AbstractExpressionCompiler {
+public class JSExpressionEvaluator extends AbstractExpressionCompiler {
     @Override
     public <K, V> CompiledExpression<K, V> compile(String expressionText, Class<K> contextType, Class<V> returnType) {
         final ContextFactory contextFactory = new ContextFactory();
@@ -55,18 +55,14 @@ public class JSExpressionCompiler extends AbstractExpressionCompiler {
         private boolean isMap;
 
         private ScopeVariablesFactory(Class contextClass) {
-            if (contextClass == null) {
-                contextClass = Object.class;
-            }
             this.contextClass = contextClass;
             if (Map.class.isAssignableFrom(contextClass)) {
                 isMap = true;
             } else {
                 for (Field f : Reflection.fields(contextClass)) {
-                    if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers())) {
+                    if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers()))
                         f.setAccessible(true);
-                        contextFields.add(f);
-                    }
+                    contextFields.add(f);
                 }
                 for (Method f : Reflection.methods(contextClass)) {
                     if (!Modifier.isStatic(f.getModifiers()) && Modifier.isPublic(f.getModifiers()) && Reflection.getterToName(f.getName()) != null && !"getClass".equals(f.getName())) {
@@ -80,7 +76,7 @@ public class JSExpressionCompiler extends AbstractExpressionCompiler {
         public void fillScope(Object context, ScriptableObject scope) {
             if (isMap) {
                 Map map = (Map) context;
-                for (Map.Entry e : (Set<Map.Entry>) map.entrySet()) {
+                for (Map.Entry e : (Set<Map.Entry>) map.keySet()) {
                     if (e.getKey() == null) {
                         throw new IllegalStateException("Null value couldn't be user as scope variable name");
                     }

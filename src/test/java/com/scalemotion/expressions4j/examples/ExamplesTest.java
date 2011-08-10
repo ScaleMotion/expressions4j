@@ -1,4 +1,4 @@
-package jexpr.examples;
+package com.scalemotion.expressions4j.examples;
 
 import org.junit.Test;
 

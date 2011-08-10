@@ -1,4 +1,4 @@
-package jexpr;
+package com.scalemotion.expressions4j;
 
 /**
  * Exception that indicates that java failed to compile

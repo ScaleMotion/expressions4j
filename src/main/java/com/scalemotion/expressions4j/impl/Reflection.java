@@ -1,4 +1,4 @@
-package jexpr.impl;
+package com.scalemotion.expressions4j.impl;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

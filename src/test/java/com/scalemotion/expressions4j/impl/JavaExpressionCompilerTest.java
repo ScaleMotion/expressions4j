@@ -1,7 +1,7 @@
-package jexpr.impl;
+package com.scalemotion.expressions4j.impl;
 
-import jexpr.ExpressionCompilationException;
-import jexpr.ExpressionCompiler;
+import com.scalemotion.expressions4j.ExpressionCompilationException;
+import com.scalemotion.expressions4j.ExpressionCompiler;
 import org.junit.Test;
 
 public class JavaExpressionCompilerTest extends AbstractExpressionCompilerTest {

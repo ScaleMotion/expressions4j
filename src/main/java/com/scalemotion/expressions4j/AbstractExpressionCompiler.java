@@ -1,4 +1,4 @@
-package jexpr;
+package com.scalemotion.expressions4j;
 
 import java.util.ArrayList;
 import java.util.List;
