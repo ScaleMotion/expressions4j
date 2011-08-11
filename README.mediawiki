@@ -9,8 +9,8 @@ when you need to generate expression from user input or expose some rules to con
 * Direct jars downloads: [http://vklimontovich.github.com/maven2/expressions4j/expressions4j/1.0 JExpr-1.0]
 * Plugin a maven repository to pom.xml
         <repository>
-            <id>vklimontovich-github</id>
-            <url>http://vklimontovich.github.com/maven2/</url>
+            <id>scalemotion-open-releases</id>
+            <url>http://maven.scalemotion.com/open/releases</url>
         </repository>
 and use it as dependency
         <dependency>

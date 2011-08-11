@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>jexpr</groupId>
-    <artifactId>jexpr</artifactId>
-    <name>jexpr</name>
+    <groupId>com.scalemotion.expressions4j</groupId>
+    <artifactId>expressions4j</artifactId>
     <version>1.1-SNAPSHOT</version>
     <scm>
-        <developerConnection>scm:git:git@github.com:vklimontovich/expressions4j.git</developerConnection>
+        <developerConnection>scm:git:file://./</developerConnection>
     </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>scpexe://scalemotion.com/var/maven/open/snapshots/</url>
+            <uniqueVersion>true</uniqueVersion>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <url>scpexe://scalemotion.com/var/maven/open/snapshots/</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>rhino</groupId>
@@ -29,6 +40,13 @@
         </dependency>
     </dependencies>
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
