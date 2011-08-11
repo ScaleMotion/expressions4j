@@ -5,7 +5,7 @@ when you need to generate expression from user input or expose some rules to con
 
 # Getting expressions4j
 
-* Direct jars downloads: [http://maven.scalemotion.com/open/com/scalemotion/expressions4j/expressions4j/1.2/ expressions4j-1.2]
+* Direct jars downloads: [expressions4j-1.2](http://maven.scalemotion.com/open/com/scalemotion/expressions4j/expressions4j/1.2/)
 * Plugin a maven repository to pom.xml
 
         <repository>
@@ -28,7 +28,8 @@ and use it as dependency
 * API is language-agnostic. Using some API you could treat expressions as Java or JavaScript (Groovy/Scala support is planned).
 Of cause, expressions syntax would be different for different language).
 * Excellent API/Interoperability: it allows to expose functions/constants/variables to your expressions very easily
-* It's lightweigh. It has zero dependecies. You should plug [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist]/[http://www.mozilla.org/rhino/ Rhino] library to classpath depending on which language you're using. 
+* It's lightweigh. It has zero dependecies. You should plug [javassist](http://www.csg.is.titech.ac.jp/~chiba/javassist/)/[Rhino](http://www.mozilla.org/rhino/) library
+to classpath depending on which language you're using.
 
 ## Basic examples
 
@@ -39,7 +40,8 @@ Of cause, expressions syntax would be different for different language).
 
 ## Dependencies
 
-expressions4j has 0 runtime dependencies itself. However you should plugin javassist/rhino/both library depending of what kind of expressions are you going to use. expressions4j was tested with javassisit 3.12.1.GA and rhino 1.7R2. It also should work with higher major versions. If you're using maven you might plugin one of (or both):
+expressions4j has 0 runtime dependencies itself. However you should plugin javassist/rhino/both library depending of what kind of expressions are you going to use.
+expressions4j was tested with javassisit 3.12.1.GA and rhino 1.7R2. It also should work with higher major versions. If you're using maven you might plugin one of (or both):
         <dependency>
             <groupId>rhino</groupId>
             <artifactId>js</artifactId>
