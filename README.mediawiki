@@ -1,26 +1,28 @@
 == About ==
 
 Expressions4j a project intended to embed expressions to Java programs. The typical use-cases is
-when you need to generate expression from user input or expose some rules to configuration files of your applications.
+when you need to generate expression from user input or expose some rules to configuration files.
 
 ==Getting expressions4j ==
-
 
 * Direct jars downloads: [http://maven.scalemotion.com/open/com/scalemotion/expressions4j/expressions4j/1.2/ expressions4j-1.2]
 * Plugin a maven repository to pom.xml
 
+<code>
         <repository>
             <id>scalemotion-open</id>
             <url>http://maven.scalemotion.com/open/</url>
         </repository>
-
+</code>
 and use it as dependency
 
+<code>
         <dependency>
             <groupId>com.scalemotion.expressions4j</groupId>
             <artifactId>expressions4j</artifactId>
             <version>1.2</version>
         </dependency>
+</code>
 
 ==Usage==
 
@@ -32,17 +34,20 @@ Of cause, expressions syntax would be different for different language).
 * It's lightweigh. It has zero dependecies. You should plug [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist]/[http://www.mozilla.org/rhino/ Rhino] library to classpath depending on which language you're using. 
 
 === Basic examples === 
-   
+
+<code>
    System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
    //will output 4
 
    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
    //will output 25
+</code>
 
-=== Dependencies === 
+=== Dependencies ===
 
 expressions4j has 0 runtime dependencies itself. However you should plugin javassist/rhino/both library depending of what kind of expressions are you going to use. expressions4j was tested with javassisit 3.12.1.GA and rhino 1.7R2. It also should work with higher major versions. If you're using maven you might plugin one of (or both):
 
+<code>
         <dependency>
             <groupId>rhino</groupId>
             <artifactId>js</artifactId>
@@ -53,6 +58,7 @@ expressions4j has 0 runtime dependencies itself. However you should plugin javas
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
         </dependency>
+</code>
 
 == API ==
 
