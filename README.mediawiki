@@ -8,12 +8,13 @@ when you need to generate expression from user input or expose some rules to con
 * Direct jars downloads: [http://maven.scalemotion.com/open/com/scalemotion/expressions4j/expressions4j/1.2/ expressions4j-1.2]
 * Plugin a maven repository to pom.xml
 
-<source lang="xml">
+<code lang="xml">
         <repository>
             <id>scalemotion-open</id>
             <url>http://maven.scalemotion.com/open/</url>
         </repository>
-</source>
+</code>
+
 and use it as dependency
 
 <pre>
