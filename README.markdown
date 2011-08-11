@@ -21,7 +21,7 @@ and use it as dependency
             <version>1.2</version>
         </dependency>
 
-# Usage==
+# Usage
 
 ## Advantages
 
@@ -30,13 +30,12 @@ Of cause, expressions syntax would be different for different language).
 * Excellent API/Interoperability: it allows to expose functions/constants/variables to your expressions very easily
 * It's lightweigh. It has zero dependecies. You should plug [http://www.csg.is.titech.ac.jp/~chiba/javassist/ javassist]/[http://www.mozilla.org/rhino/ Rhino] library to classpath depending on which language you're using. 
 
-=== Basic examples === 
+## Basic examples
 
-   System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
-   //will output 4
+    System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
+    //will output 4
 
-   System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
-</pre>
+    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
 
 ## Dependencies
 
