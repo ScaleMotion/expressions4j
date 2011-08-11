@@ -8,21 +8,21 @@ when you need to generate expression from user input or expose some rules to con
 * Direct jars downloads: [http://maven.scalemotion.com/open/com/scalemotion/expressions4j/expressions4j/1.2/ expressions4j-1.2]
 * Plugin a maven repository to pom.xml
 
-<code>
+<pre>
         <repository>
             <id>scalemotion-open</id>
             <url>http://maven.scalemotion.com/open/</url>
         </repository>
-</code>
+</pre>
 and use it as dependency
 
-<code>
+<pre>
         <dependency>
             <groupId>com.scalemotion.expressions4j</groupId>
             <artifactId>expressions4j</artifactId>
             <version>1.2</version>
         </dependency>
-</code>
+</pre>
 
 ==Usage==
 
@@ -35,13 +35,13 @@ Of cause, expressions syntax would be different for different language).
 
 === Basic examples === 
 
-<code>
+<pre>
    System.out.println(new JavaExpressionCompiler().compile("return 2 + 2;", Object.class, int.class).evaluate(null));
    //will output 4
 
    System.out.println(new JSExpressionCompiler().compile("5 * 5;", Object.class, int.class).evaluate(null));
    //will output 25
-</code>
+</pre>
 
 === Dependencies ===
 
