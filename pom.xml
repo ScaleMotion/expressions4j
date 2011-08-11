@@ -8,14 +8,9 @@
         <developerConnection>scm:git:git://github.com/ScaleMotion/expressions4j</developerConnection>
     </scm>
     <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>scpexe://scalemotion.com/var/maven/open/snapshots/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
         <repository>
-            <id>releases</id>
-            <url>scpexe://scalemotion.com/var/maven/open/snapshots/</url>
+            <id>repo</id>
+            <url>scpexe://scalemotion.com/var/maven/open/</url>
         </repository>
     </distributionManagement>
     <dependencies>
